@@ -18,7 +18,12 @@ print("\nPegando o texto todo com quebra de linha")
 print(junta_texto)
 print("\n-----------")
 #Isso pega as primeira 50 posições da pagina selecionada e imprimi
+'''
 print("Pegando apenas as 50 primeiras posições")
 novaString = junta_texto[0:50]
 print(novaString)
+'''
 
+import io
+with io.open('fenabrave.txt', "w", encoding="utf-8") as file:
+    file.write(str(junta_texto))
